@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#scoreboard {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#diceContainer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dice {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    position: relative;
+    perspective: 1000px;
+    transition: transform 0.2s;
+}
+
+.dice.locked {
+    background-color: #add8e6;
+    border: 2px solid #000080;
+}
+
+.dice:hover {
+    transform: rotateX(20deg) rotateY(20deg);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.dot1 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.dot2 { top: 15%; left: 15%; }
+.dot3 { top: 70%; left: 15%; }
+.dot4 { top: 15%; left: 70%; }
+.dot5 { top: 70%; left: 70%; }
+.dot6 { top: 50%; left: 15%; transform: translateY(-50%); }
+.dot7 { top: 50%; left: 70%; transform: translateY(-50%); }
+.dot8 { top: 25%; left: 50%; transform: translateX(-50%); }
+.dot9 { top: 75%; left: 50%; transform: translateX(-50%); }
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.temporary-score {
+    display: block;
+    color: #999;
+    font-size: 0.8em;
+}
